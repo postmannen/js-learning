@@ -27,10 +27,26 @@ var var5 = {
     key1: "some name",
     key2: "some other name",
 };
+console.log("The content of var5 before running myFunc5 = ", var5);
 function myFunc5(v) {
     v.some = "some value";
     v.someMore = "some more value";
 
 }
 myFunc5(var5);
-console.log("object after running myFunc5 : " + var5);
+//TODO: Checkout why you can print each objects properties by specifying the property
+//in the console.log statement, but when for example you try to print out the whole
+//object without the properties it gives the output "[object Object]"
+console.log("var5 after running myFunc5 : " + var5.someMore);
+console.log("var5 after running myFunc5 : " + var5.someMore);
+
+//returning an object from function
+function myFunc6(v) {
+    return {
+        var1: "some value",
+        var2: "some other value",
+        var3: v,
+    };
+}
+var myVar6 = myFunc6("some third value");
+console.log(myVar6);
