@@ -22,7 +22,13 @@ console.log("The array after doing a splice = ", myArray1);
 myArray1.forEach(function (v, i, a) {
     console.log("first test with three arguments, v = " + v + ", i = " + i + ", a = " + a);
 });
+//
 //Second with just the value of the array element.
 myArray1.forEach(function (v) {
     console.log("second test with single argument, v = " + v);
+});
+//
+//Third, with two arguments to the function
+myArray1.forEach(function (v, i) {
+    console.log("second test with single argument, v = " + v + ", and index = " + i);
 });
